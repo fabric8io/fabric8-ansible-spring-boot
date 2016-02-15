@@ -1,0 +1,22 @@
+---
+# Creates App user and group in the system
+- name: Create App user
+  user: name={{ app_owner }} createhome=no home={{ app_home }} shell=/sbin/nologin state=present
+
+# Checks whether App home directory already exists
+- name: Check if App is already installed
+  stat: path={{ app_home }}
+  register: app_installed
+
+# Download App package
+- name: Download App
+  get_url: url={{ app_url }} dest=/etc/init.d/{{ app_name }}
+  when: not app_installed.stat.exists
+
+# Changes ownership of the app
+- name: Change permissions of service
+  file: path=/etc/init.d/{{ app_name }} owner={{ app_owner }} group={{ app_group }} mode=500
+
+# Starts App service and enables start on bootup
+- name: Start App
+  service: name={{ app_name }} state=started enabled=yes

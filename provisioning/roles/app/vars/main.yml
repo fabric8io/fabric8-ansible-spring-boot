@@ -1,0 +1,6 @@
+---
+# App tgz file name
+app_package: '{{ app_name }}-{{ app_version }}{{ app_classifier }}.jar'
+
+# TODO dirty hack for now!!
+app_url: 'https://oss.sonatype.org/content/repositories/snapshots/io/fabric8/quickstarts/{{ app_name }}/2.2.98-SNAPSHOT/{{ app_name }}-2.2.98-20160215.122740-2.jar'

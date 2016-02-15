@@ -1,0 +1,7 @@
+---
+# JRE rpm package file name
+java_rpm: 'jre-8u45-linux-x64.rpm'
+# JAVA_HOME environment variable value
+java_home: '/usr/java/jre1.8.0_45'
+# JRE_HOME environment variable value
+jre_home: '{{ java_home }}'

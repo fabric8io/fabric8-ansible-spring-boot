@@ -1,0 +1,20 @@
+#---------------------------------------------------------------------------------------------------------
+# Application settings
+#---------------------------------------------------------------------------------------------------------
+
+# App name
+app_name: 'springboot-camel'
+
+app_owner: '{{ app_name }}'
+app_group: '{{ app_name }}'
+
+app_classifier: ''
+
+# App home directory
+app_home: '/opt/{{ app_name }}-{{ app_version }}{{ app_classifier }}'
+
+# App version
+app_version: '2.2.98-SNAPSHOT'
+
+# Port on which web applications are served on appservers
+app_port: 8080

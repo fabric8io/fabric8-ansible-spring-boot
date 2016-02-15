@@ -1,0 +1,14 @@
+---
+# Copies JRE rpm package from control machine to provisioned machine
+- name: Copy rpm to provisioned machine
+  copy: src={{ java_rpm }} dest={{ ansible_env.HOME }}
+
+# Installs JRE from local rpm using yum
+- name: Install JRE
+  yum: name={{ ansible_env.HOME }}/{{ java_rpm }} state=present
+  sudo: yes
+
+# Add JAVA_HOME and JRE_HOME variables to bash profile
+- name: Add script setting JAVA_HOME and JRE_HOME
+  template: src=java.sh.j2 dest=/etc/profile.d/java.sh owner=root group=root mode=0644
+  sudo: yes

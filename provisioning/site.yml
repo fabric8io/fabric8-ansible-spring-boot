@@ -1,0 +1,7 @@
+---
+# Playbook for environment provisioning
+# Provisions application servers with the App
+- name: Provision appservers
+  hosts: appservers
+  roles:
+    - { role: app, sudo: yes } # Depends on java role
