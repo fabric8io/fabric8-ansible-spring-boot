@@ -10,13 +10,17 @@
 
 # Download App package
 - name: Download App
-  get_url: url={{ app_url }} dest=/etc/init.d/{{ app_name }}
+  get_url: url={{ app_url }} dest=/opt/{{ app_name }}-{{ app_version }}
   when: not app_installed.stat.exists
 
 # Changes ownership of the app
 - name: Change permissions of service
-  file: path=/etc/init.d/{{ app_name }} owner={{ app_owner }} group={{ app_group }} mode=500
+  file: path=/opt/{{ app_name }}-{{ app_version }} mode=500
 
-# Starts App service and enables start on bootup
-- name: Start App
-  service: name={{ app_name }} state=started enabled=yes
+# Changes ownership of the app
+#- name: Change permissions of service
+#  file: path=/opt/{{ app_name }}-{{ app_version }} owner={{ app_owner }} group={{ app_group }} mode=500
+
+# Starts App
+#- name: Start App
+#  service: name={{ app_name }} state=started enabled=yes
