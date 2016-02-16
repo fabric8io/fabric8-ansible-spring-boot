@@ -15,7 +15,7 @@
 
 # Changes ownership of the app
 - name: Change permissions of service
-  file: path=/opt/{{ app_name }}-{{ app_version }} mode=500
+  file: path=/opt/{{ app_name }}-{{ app_version }} owner={{ app_owner }} group={{ app_group }} mode=555
 
 # Changes ownership of the app
 #- name: Change permissions of service
