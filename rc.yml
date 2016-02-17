@@ -9,7 +9,6 @@ metadata:
     version: "2.2.98-SNAPSHOT"
   annotations:
 spec:
-  replicas: 1
   selector:
     project: "fabric8-ansible-springboot"
     provider: "fabric8"
