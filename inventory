@@ -1,3 +1,6 @@
 [appservers]
 app1 ansible_ssh_host=10.10.2.20 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/app1/virtualbox/private_key
 app2 ansible_ssh_host=10.10.2.21 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/app2/virtualbox/private_key
+
+[winboxes]
+appx ansible_ssh_host=10.10.2.30 ansible_ssh_user=vagrant ansible_ssh_pass=mypassword winrm=true
