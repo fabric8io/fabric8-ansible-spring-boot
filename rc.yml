@@ -1,0 +1,27 @@
+---
+apiVersion: "v1"
+kind: "ReplicationController"
+metadata:
+  name: "fabric8-ansible-springboot"
+  labels:
+    project: "fabric8-ansible-springboot"
+    provider: "fabric8"
+    version: "2.2.98-SNAPSHOT"
+  annotations:
+spec:
+  replicas: 1
+  selector:
+    project: "fabric8-ansible-springboot"
+    provider: "fabric8"
+    version: "2.2.98-SNAPSHOT"
+  template:
+    metadata:
+      labels:
+        project: "fabric8-ansible-springboot"
+        provider: "fabric8"
+        version: "2.2.98-SNAPSHOT"
+    spec:
+      containers:
+      - env:
+        - name: "GOSUPERVISE_COMMAND"
+          value: "/opt/springboot-camel-2.2.98-SNAPSHOT"
