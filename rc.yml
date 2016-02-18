@@ -24,3 +24,4 @@ spec:
       - env:
         - name: "GOSUPERVISE_COMMAND"
           value: "/opt/springboot-camel-2.2.98-SNAPSHOT"
+      serviceAccountName: "fabric8"
