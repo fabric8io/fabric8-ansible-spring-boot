@@ -4,21 +4,11 @@ kind: "ReplicationController"
 metadata:
   name: "springboot-demo"
   labels:
-    project: "fabric8-ansible-springboot"
-    provider: "fabric8"
+    project: "springboot-demo"
     version: "2.2.98-SNAPSHOT"
   annotations:
 spec:
-  selector:
-    project: "fabric8-ansible-springboot"
-    provider: "fabric8"
-    version: "2.2.98-SNAPSHOT"
   template:
-    metadata:
-      labels:
-        project: "fabric8-ansible-springboot"
-        provider: "fabric8"
-        version: "2.2.98-SNAPSHOT"
     spec:
       containers:
       - env:
