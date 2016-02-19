@@ -4,4 +4,4 @@ This folder contains the [kubernetes](http://kubernetes.io/) resources for [kans
 
 There is a folder per ansible host which contains an `rc.yml` to define the [Replication Controller](http://kubernetes.io/v1.1/docs/user-guide/replication-controller.html) to run the kansible pods:
 
-* [appservers/rc.yaml](appservers/rc.yaml)
+* [appservers/rc.yml](appservers/rc.yml)
