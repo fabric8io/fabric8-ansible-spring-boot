@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - env:
-        - name: "GOSUPERVISE_COMMAND"
+        - name: "KANSIBLE_COMMAND"
           value: "{{ app_home }}"
       serviceAccountName: "fabric8"
