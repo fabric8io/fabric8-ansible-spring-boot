@@ -1,4 +1,4 @@
-# Introduction
+# Kansible demo for Spring Boot
 
 This is a simple example of provisioning an executable Spring Boot jar with Ansible.
 
